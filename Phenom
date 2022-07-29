@@ -1,0 +1,20 @@
+local UIS = game:GetService('UserInputService')
+local Player = game.Players.LocalPlayer
+local Character = Player.Character or Player.CharacterAded:Wait()
+local Key = 'M'
+local Stadium = game.Workspace.Stadium
+  UIS.InputBegan:Connect(function(Input, IsTyping)
+    if IsTyping then return end
+local Pressed = Input.KeyCode
+  if Pressed == Enum.KeyCode[Key] then
+
+for i, v in pairs(Stadium:GetDescendants()) do
+if v.Name == ("Part") then
+v.Transparency = 1
+
+game.Lighting.Brightness = 3
+game.Lighting.TimeOfDay = 4
+            end
+        end
+    end
+end)
